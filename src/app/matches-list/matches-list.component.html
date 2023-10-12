@@ -1,0 +1,36 @@
+<h2>Statistics</h2>
+
+<table class="table">
+  <tr *ngFor="let match of matches">
+    <td>
+      <img
+        src="{{ match.teams.home.logo }}"
+        alt="{{ match.teams.home.name }}"
+        width="30px"
+      />
+    </td>
+    <td>
+      {{ match.teams.home.name }}
+    </td>
+    <td>
+      <strong>{{ match.goals.home }}</strong>
+    </td>
+    <td>-</td>
+    <td>
+      <strong>{{ match.goals.away }}</strong>
+    </td>
+    <td>{{ match.teams.away.name }}</td>
+
+    <td>
+      <img
+        src="{{ match.teams.away.logo }}"
+        alt="{{ match.teams.home.name }}"
+        width="30px"
+      />
+    </td>
+  </tr>
+</table>
+
+<div>
+  <a class="button primary" (click)="goBack()">Back</a>
+</div>
