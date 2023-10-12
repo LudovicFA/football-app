@@ -27,6 +27,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/football-app/",
               "budgets": [
                 {
                   "type": "initial",
