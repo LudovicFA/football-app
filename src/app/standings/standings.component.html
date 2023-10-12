@@ -1,8 +1,9 @@
 <button
-  mat-button
+  class="button"
   *ngFor="let league of leagues"
   id="{{ league.country | lowercase }}Select"
   (click)="onClickLeague(league.id)"
+  [ngClass]="league.id === currentLeague ? 'active' : ''"
 >
   {{ league.country }}
 </button>

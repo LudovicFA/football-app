@@ -9,10 +9,11 @@ import { environment } from 'src/environments/environment';
 })
 export class StandingService {
   private apiUrl: string = environment.API_URL;
+  protected _currentLeague: number = 0;
+
   headers = new HttpHeaders({
     'x-rapidapi-key': environment.API_KEY,
   });
-  protected _currentLeague: number = 0;
 
   get currentLeague(): number {
     return this._currentLeague;
